@@ -1,0 +1,21 @@
+{
+  "name": "guitar-helper",
+  "version": "0.0.0",
+  "description": "Simple game to help learn the fretboard",
+  "private": true,
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.9.5",
+    "vite": "^4.1.1",
+    "vite-plugin-solid": "^2.5.0"
+  },
+  "dependencies": {
+    "solid-js": "^1.6.10"
+  }
+}
