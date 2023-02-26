@@ -10,7 +10,7 @@ const randomString = () => randomInt(1, stringCount);
 const randomFret = () => randomInt(0, fretCount);
 
 const notes = ['a', 'a#', 'b', 'c', 'c#', 'd', 'd#', 'e', 'f', 'f#', 'g', 'g#'];
-const stringNoteIndexes = [7, 2, 9, 5, 0, 7];
+const stringNoteIndexes = [7, 2, 10, 5, 0, 7];
 
 function guitarNote(string: number, fret: number): string {
   const startingNoteIndex = stringNoteIndexes[string - 1];
