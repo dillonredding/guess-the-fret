@@ -51,11 +51,11 @@ const OptionButton: ParentComponent<{ value: string }> = (props) => {
 };
 
 const App: Component = () => {
-  const handleGuess = () => {
+  const submitGuess = () => {
     setGuessed(true);
   };
 
-  const handleReset = () => {
+  const resetGame = () => {
     setFret(randomFret());
     setString(randomString());
     setSelection(undefined);
@@ -105,12 +105,12 @@ const App: Component = () => {
         <Show
           when={guessed()}
           fallback={
-            <button class="action-btn" onClick={() => handleGuess()} disabled={!selection()}>
-              Guess
+            <button class="action-btn" onClick={submitGuess} disabled={!selection()}>
+              Submit
             </button>
           }
         >
-          <button class="action-btn" onClick={() => handleReset()}>
+          <button class="action-btn" onClick={resetGame}>
             Reset
           </button>
         </Show>
