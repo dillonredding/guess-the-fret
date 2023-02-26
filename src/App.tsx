@@ -1,6 +1,6 @@
 import './App.css';
 
-import { Component, createSignal, Show } from 'solid-js';
+import { Component, createSignal, ParentComponent, Show } from 'solid-js';
 
 const stringCount = 6;
 const fretCount = 12;
@@ -33,12 +33,7 @@ const correctNote = () => guitarNote(string(), fret());
 const [guessed, setGuessed] = createSignal(false);
 const [selection, setSelection] = createSignal<string>();
 
-interface OptionButtonProps {
-  value: string;
-  children: any;
-}
-
-const OptionButton: Component<OptionButtonProps> = (props: OptionButtonProps) => {
+const OptionButton: ParentComponent<{ value: string }> = (props) => {
   return (
     <button
       class="option-btn"
