@@ -9,5 +9,5 @@ export default defineConfig({
   build: {
     target: 'esnext'
   },
-  base: '/guitar-helper/'
+  base: '/guess-the-fret/'
 });
