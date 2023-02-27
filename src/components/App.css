@@ -1,5 +1,6 @@
 .options {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
   gap: 0.5rem;
 }
 
@@ -8,4 +9,16 @@
   --bg-color-saturation: 100%;
   --bg-color-lightness: 61%;
   color: white;
+}
+
+@media (max-width: 1124px) {
+  .options {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (max-width: 564px) {
+  .options {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
