@@ -1,5 +1,5 @@
 {
-  "name": "guitar-helper",
+  "name": "guess-the-fret",
   "version": "1.0.1",
   "description": "Simple game to help learn the fretboard",
   "private": true,
