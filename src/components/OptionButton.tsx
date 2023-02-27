@@ -1,3 +1,5 @@
+import './OptionButton.css';
+
 import { ParentComponent } from 'solid-js';
 
 import { correctNote, guessed, selection, setSelection } from '../store';

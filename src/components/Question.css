@@ -1,0 +1,8 @@
+.question {
+  font-size: 3rem;
+}
+
+.highlight {
+  font-style: normal;
+  color: hsl(268, 100%, 61%);
+}

@@ -1,0 +1,30 @@
+.option-btn {
+  --bg-color-hue: 0;
+  --bg-color-saturation: 0%;
+  --bg-color-lightness: 87%;
+}
+
+.option-btn.selected,
+.option-btn.selected:hover,
+.option-btn.selected:active {
+  background-color: hsl(268, 100%, 61%);
+  cursor: default;
+  color: white;
+}
+
+.option-btn.correct,
+.option-btn.correct:hover,
+.option-btn.correct:active {
+  background-color: hsl(116, 94%, 50%);
+  cursor: default;
+  opacity: 1;
+}
+
+.option-btn.incorrect,
+.option-btn.incorrect:hover,
+.option-btn.incorrect:active {
+  background-color: hsl(0, 94%, 50%);
+  cursor: default;
+  color: white;
+  opacity: 1;
+}

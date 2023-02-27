@@ -20,7 +20,7 @@ const App: Component = () => {
   };
 
   return (
-    <div class="main-div">
+    <>
       <Question />
       <div class="options">
         <OptionButton value="a">A</OptionButton>
@@ -70,7 +70,7 @@ const App: Component = () => {
           </button>
         </Show>
       </div>
-    </div>
+    </>
   );
 };
 
