@@ -2,22 +2,12 @@ import './App.css';
 
 import { Component, Show } from 'solid-js';
 
-import { guessed, selection, setFret, setGuessed, setSelection, setString } from '../store';
-import { randomFret, randomString } from '../utils/music';
+import { useGame } from '../game';
 import { OptionButton } from './OptionButton';
 import { Question } from './Question';
 
 const App: Component = () => {
-  const submitGuess = () => {
-    setGuessed(true);
-  };
-
-  const resetGame = () => {
-    setFret(randomFret());
-    setString(randomString());
-    setSelection(undefined);
-    setGuessed(false);
-  };
+  const { selection, guess, guessed, reset } = useGame();
 
   return (
     <>
@@ -60,12 +50,12 @@ const App: Component = () => {
         <Show
           when={guessed()}
           fallback={
-            <button class="action-btn" onClick={submitGuess} disabled={!selection()}>
+            <button class="action-btn" onClick={guess} disabled={!selection()}>
               Submit
             </button>
           }
         >
-          <button class="action-btn" onClick={resetGame}>
+          <button class="action-btn" onClick={reset}>
             Reset
           </button>
         </Show>

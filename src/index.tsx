@@ -4,6 +4,7 @@ import './index.css';
 import { render } from 'solid-js/web';
 
 import App from './components/App';
+import { GameProvider } from './game';
 
 const root = document.getElementById('root');
 
@@ -13,4 +14,11 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
   );
 }
 
-render(() => <App />, root!);
+render(
+  () => (
+    <GameProvider>
+      <App />
+    </GameProvider>
+  ),
+  root!
+);

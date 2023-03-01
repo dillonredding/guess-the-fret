@@ -2,16 +2,17 @@ import './OptionButton.css';
 
 import { ParentComponent } from 'solid-js';
 
-import { correctNote, guessed, selection, setSelection } from '../store';
+import { useGame } from '../game';
 
 export const OptionButton: ParentComponent<{ value: string }> = (props) => {
+  const { selection, setSelection, guessed, isCorrect, isIncorrect } = useGame();
   return (
     <button
       class="option-btn"
       classList={{
         selected: selection() === props.value,
-        correct: guessed() && correctNote() === props.value,
-        incorrect: guessed() && correctNote() !== props.value && selection() === props.value
+        correct: isCorrect(props.value),
+        incorrect: isIncorrect(props.value) && selection() === props.value
       }}
       onClick={() => setSelection(props.value)}
       disabled={guessed()}
